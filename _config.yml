@@ -1,7 +1,0 @@
-title: Robert M
-description: Software Engineer | AI Systems | Machine Learning
-theme: jekyll-theme-hacker
-
-collections:
-  projects:
-    output: true
