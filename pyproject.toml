@@ -1,0 +1,30 @@
+[project]
+name = "scalable-python-service"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "Demo of a scalable FastAPI project with SQLAlchemy"
+authors = [
+    { name = "Robert M", email = "nope@something.com" }
+]
+
+# Core dependencies
+dependencies = [
+    "fastapi>=0.110,<1.0",
+    "uvicorn[standard]>=0.29,<1.0",
+    "sqlalchemy>=2.0,<2.2",
+    "pydantic-settings>=2.0,<3.0",
+]
+
+# Optional dev dependencies
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<9.0",
+    "pytest-asyncio>=0.21.0,<1.0"
+]
+
+# Pytest configuration
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q --strict-markers --strict-config"
+testpaths = ["tests"]
+asyncio_mode = "auto"
